@@ -890,7 +890,7 @@
           msg: "A Roman Priest — history agrees with you. St. Valentine was serving love long before greeting cards existed!"
         },
         wrong: {
-          icon: "😅",
+          icon: "",
           title: "Oops, {name}!",
           msg: "St. Valentine was actually a Roman Priest — not exactly a king or a painter, but he was royally brave!"
         }
@@ -898,12 +898,12 @@
       {
         // Q2 — St. Valentine's city
         correct: {
-          icon: "✨",
+          icon: "",
           title: "Magnifico, {name}!",
           msg: "Rome! The eternal city of love. You might have a future as a Valentine historian!"
         },
         wrong: {
-          icon: "🗺️",
+          icon: "",
           title: "Wrong city, {name}!",
           msg: "He lived in Rome — though Paris might feel more romantic, the real story started in the eternal city!"
         }
@@ -911,12 +911,12 @@
       {
         // Q3 — True heart of Valentine's Day
         correct: {
-          icon: "❤️",
+          icon: "",
           title: "You get it, {name}!",
           msg: "Love & Appreciation — that's the whole point. And clearly you've been paying attention!"
         },
         wrong: {
-          icon: "🎁",
+          icon: "",
           title: "Put the chocolate down, {name}!",
           msg: "It's about Love & Appreciation, not just gifts! Though chocolate never hurts either, to be fair…"
         }
@@ -924,12 +924,12 @@
       {
         // Q4 — Date of Valentine's Day
         correct: {
-          icon: "📅",
+          icon: "",
           title: "Mark your calendar, {name}!",
           msg: "February 14th — now you have no excuse to forget. We're watching you!"
         },
         wrong: {
-          icon: "😬",
+          icon: "",
           title: "Wrong date, {name}!",
           msg: "It's February 14th! If this were real life, someone might have been waiting with flowers and you'd have missed it!"
         }
@@ -955,7 +955,7 @@
           msg: "Cupid! The tiny archer who has been causing romantic chaos since ancient Rome. You clearly haven't been hit yet — you're too sharp!"
         },
         wrong: {
-          icon: "😂",
+          icon: "",
           title: "Zeus? Really, {name}?",
           msg: "It's Cupid! Zeus was busy throwing lightning bolts — Cupid's the one with the love arrows. Very different energy!"
         }
@@ -963,12 +963,12 @@
       {
         // Q7 — First Valentine's letter from a prison cell
         correct: {
-          icon: "✍️",
+          icon: "",
           title: "You know your history, {name}!",
           msg: "A prison cell! Nothing says 'I love you' like writing a heartfelt letter from behind bars. Romantic dedication!"
         },
         wrong: {
-          icon: "🏰",
+          icon: "",
           title: "Close, but no quill, {name}!",
           msg: "The first Valentine's letter was written from a prison cell! Love finds a way, even through iron bars."
         }
@@ -976,12 +976,12 @@
       {
         // Q8 — XOXO
         correct: {
-          icon: "🤗",
+          icon: "",
           title: "XOXO to you, {name}!",
           msg: "Hugs and Kisses! You clearly speak the language of love fluently. Consider this a virtual hug for the correct answer!"
         },
         wrong: {
-          icon: "💔",
+          icon: "",
           title: "Aww, {name}!",
           msg: "XOXO means Hugs and Kisses! Now you know — go send it to someone special. Better late than never!"
         }
@@ -1134,7 +1134,7 @@
               <span class="q-counter">Question ${idx + 1} of ${totalSlides}</span>
               <span class="score-badge" id="score-badge-${idx}">Score: 0</span>
             </div>
-            <div class="name-banner" id="name-banner-${idx}">Good luck, ${userName}! ✨</div>
+            <div class="name-banner" id="name-banner-${idx}">Good luck, ${userName}! </div>
             <p class="question-text">${qData.q}</p>
             <div class="options-grid" id="opts-${idx}">
               ${qData.options.map((opt, i) => `
@@ -1192,7 +1192,7 @@
       if (badge) {
         let badgeHTML = `Score: ${score}`;
         if (streak >= 2) {
-          badgeHTML += `<span class="streak-chip">🔥 ${streak} streak</span>`;
+          badgeHTML += `<span class="streak-chip"> ${streak} streak</span>`;
         }
         badge.innerHTML = badgeHTML;
         badge.classList.add('score-animate');
@@ -1214,25 +1214,25 @@
     //  NAME BANNER — inline reactions per question
     // ===================================================
     const CORRECT_BANNERS = [
-      "{name}, that is absolutely correct! 🎉",
-      "You nailed it, {name}! Cupid is impressed. 💘",
+      "{name}, that is absolutely correct! ",
+      "You nailed it, {name}! Cupid is impressed. ",
       "Of course you knew that, {name}! 🌹",
-      "Right on point, {name}! Love is clearly your language. ✨",
-      "Spot on, {name}! You're on fire! 🔥",
-      "Wow, {name}! You really know your Valentine history! 🏅",
-      "{name} wins this round decisively! 🌟",
-      "Perfect, {name}! That one sealed the deal! 💫",
+      "Right on point, {name}! Love is clearly your language. ",
+      "Spot on, {name}! You're on fire! ",
+      "Wow, {name}! You really know your Valentine history! ",
+      "{name} wins this round decisively! ",
+      "Perfect, {name}! That one sealed the deal! ",
     ];
 
     const WRONG_BANNERS = [
-      "Oof, {name}! Even St. Valentine is shaking his head. 😬",
-      "Not quite, {name} — Rome wasn't built in a day, and neither is quiz glory! 😅",
-      "Come on, {name}! Love is more than gifts! 💔",
-      "Date night cancelled, {name}! You missed the date! 📅",
-      "Roses are red, {name} missed this one… 🥀",
-      "Cupid's arrow went wide for {name}! 🏹",
-      "The prison bars couldn't stop Valentine — but this question stopped {name}! 😂",
-      "XOXO is sending you comfort, {name}! 🤗",
+      "Oof, {name}! Even St. Valentine is shaking his head. ",
+      "Not quite, {name} — Rome wasn't built in a day, and neither is quiz glory! ",
+      "Come on, {name}! Love is more than gifts! ",
+      "Date night cancelled, {name}! You missed the date! ",
+      "Roses are red, {name} missed this one… ",
+      "Cupid's arrow went wide for {name}! ",
+      "The prison bars couldn't stop Valentine — but this question stopped {name}! ",
+      "XOXO is sending you comfort, {name}! ",
     ];
 
     function updateNameBanner(slideIdx, isCorrect) {
@@ -1274,12 +1274,12 @@
       if (!banner) return;
 
       const nudges = [
-        `Still with us, ${userName}? Let's go! 💪`,
+        `Still with us, ${userName}? Let's go! `,
         `${userName}, question ${idx + 1} awaits… 👀`,
-        `Halfway there, ${userName}! Keep it up! 🌟`,
-        `${userName}, the stakes are rising! ❤️`,
-        `Almost there, ${userName}! Stay sharp! 🎯`,
-        `Final stretch, ${userName}! You've got this! 🏁`,
+        `Halfway there, ${userName}! Keep it up! `,
+        `${userName}, the stakes are rising! `,
+        `Almost there, ${userName}! Stay sharp! `,
+        `Final stretch, ${userName}! You've got this! `,
       ];
 
       banner.textContent = nudges[Math.min(idx - 1, nudges.length - 1)];
